@@ -1,53 +1,56 @@
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let thumbnails = document.querySelectorAll('.thumbnail .item');
+const slider = document.querySelector('.slider');
 
-// config param
-let countItem = items.length;
-let itemActive = 0;
-// event next click
-next.onclick = function(){
-    itemActive = itemActive + 1;
-    if(itemActive >= countItem){
-        itemActive = 0;
+function activate(e) {
+  const items = document.querySelectorAll('.item');
+  e.target.matches('.next') && slider.append(items[0])
+  e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+}
+
+document.addEventListener('click',activate,false);
+// can return attribute changes for selector
+(function($) {
+    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+  
+    $.fn.attrchange = function(callback) {
+      if (MutationObserver) {
+        var options = {
+          subtree: false,
+          attributes: true
+        };
+  
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(e) {
+            callback.call(e.target, e.attributeName);
+          });
+        });
+  
+        return this.each(function() {
+          observer.observe(this, options);
+        });
+  
+      }
     }
-    showSlider();
-}
-//event prev click
-prev.onclick = function(){
-    itemActive = itemActive - 1;
-    if(itemActive < 0){
-        itemActive = countItem - 1;
+  })(jQuery);
+  
+  // when one details opens, close the others
+  $('.details-item').attrchange(function(attribute){
+    if(attribute == "open" && $(this).attr("open")) {
+      $(this).siblings(".details-item").removeAttr("open");
     }
-    showSlider();
-}
-// auto run slider
-let refreshInterval = setInterval(() => {
-    next.click();
-}, 5000)
-function showSlider(){
-    // remove item active old
-    let itemActiveOld = document.querySelector('.slider .list .item.active');
-    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
-    itemActiveOld.classList.remove('active');
-    thumbnailActiveOld.classList.remove('active');
-
-    // active new item
-    items[itemActive].classList.add('active');
-    thumbnails[itemActive].classList.add('active');
-
-    // clear auto time run slider
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(() => {
-        next.click();
-    }, 5000)
-}
-
-// click thumbnail
-thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-        itemActive = index;
-        showSlider();
-    })
-})
+  });
+  
+  // keyboard: prevent closing the open details to emulate tabs
+  $('.details-tab').on("keydown", function(e) {
+    if(e.keyCode == 32 || e.keyCode == 13) {
+      if($(this).parent().attr("open")) {
+        e.preventDefault();
+      }
+    } 
+  });
+  
+  // mouse: prevent closing the open details to emulate tabs
+  $('.details-tab').on("click", function(e) {
+    if($(this).parent().attr("open")) {
+      e.preventDefault();
+    }
+  });
