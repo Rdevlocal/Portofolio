@@ -54,3 +54,6 @@ document.addEventListener('click',activate,false);
       e.preventDefault();
     }
   });
+
+  //homepage
+  
