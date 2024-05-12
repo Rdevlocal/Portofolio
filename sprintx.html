@@ -11,7 +11,7 @@
   <header class="header">
     <nav>
       <div class="logo">
-        <a href="index.html">Rens <span>van Dijk</span></a>
+        <a href="index.html">Rens<span>van Dijk</span></a>
       </div>
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -21,89 +21,54 @@
         <li><a href="#">Development & version control</a></li>
         <li><a href="#">Iterative design</a></li>
         <li><a href="#">Professional standard</a></li>
-        <li><a href="#">Personal Leadership</a></li>
+        <li><a href="#" >Personal Leadership</a></li>
 
       </ul>
     </nav>
   </header>
-    <ul class="tabs">
-      <li class="active" data-id="0">Education</li>
-      <li data-id="1">In-session Training</li>
-      <li data-id="2">Experience</li>
-      <li data-id="3">Interview</li>
-  </ul>
-
-  <div class="contents">
-
-      <div class="box show" data-content="0">
-          <img src="https://images.pexels.com/photos/5088009/pexels-photo-5088009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
-          <div>
-              <h3>Lorem ipsum dolor</h3>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-              </p>
+  <h1>Using the <span>&lt;details&gt;</span> tag to create tabs</h1>
+  <div class="details-tabs">
+      <details class="details-item" open> <!-- default first "tab" to open -->
+          <summary class="details-tab">The details tag</summary>
+          <div class="details-content">
+              <p>Imagine an <strong>accordion-like element</strong> with <strong>native keyboard support</strong> that doesn't require javascript for control.</p>
+              <p>Enter the details tag.</p>
+              <details>
+                  <summary>The details tag</summary>
+                  <p>This is a details tag with content</p>
+              </details>
+              <p>The details tag gives us a simple accordion with no scripts&mdash;that's great! But it feels like it could be something more...imagine if it could do tabs.</p>
           </div>
-      </div>
-
-      <div class="box hide" data-content="1">
-          <img src="https://images.pexels.com/photos/5865862/pexels-photo-5865862.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="">
-          <div>
-              <h3>Lorem ipsum dolor</h3>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-              </p>
+      </details>
+      <details class="details-item">
+          <summary class="details-tab">What about tabs?</summary>
+          <div class="details-content">
+              <p>Tabs and accordions work in technically the same way, although tabs typically require a shared parent container and containers to build out the tabs and content separate from each other.</p>
+              <p>Interactivity is another difference: the ways accordions or tabs are toggled. With accordions it's common to be able to open and close them individually, but with tabs there must always be one, and only one, open.</p>
+              <p>At first glance there doesn't seem to be a way to make this work. The structure isn't right. The layout isn't right. The functionality isn't quite right. But each of those problems can be solved if we look a bit closer.</p>
           </div>
-      </div>
-
-      <div class="box hide" data-content="2">
-          <img src="https://images.pexels.com/photos/3761308/pexels-photo-3761308.jpeg?auto=compress&cs=tinysrgb&w=800" alt="">
-          <div>
-              <h3>Lorem ipsum dolor</h3>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-              </p>
+      </details>
+      <details class="details-item">
+          <summary class="details-tab">CSS trickery</summary>
+          <div class="details-content">
+              <p>With a little help from the <strong>display: contents;</strong> property, we can transform a group of discrete details tags with tab and content area elements as children, into a group of the tab and content area elements from all the details elements mixed together.</p>
+              <p>Say you had 3 small buckets of red and blue balls. The buckets can interact with each other or bang together, but the balls inside each bucket can't interact with the balls from the other buckets.</p>
+              <p>You could think of what we are doing like pouring all of the small buckets into a larger bucket. Now all of the balls can interact with each other and we can organize them by color in the bigger bucket. With display: contents; it's as if the details tag isn't there at all&mdash;at least visually.</p>
+              <p>Now that all the tab and content area elements can interact with each other in the flow of the page, we can use <strong>display: flex;</strong> and <strong>order</strong> to make the tabs flow nicely but also be separate from the content area.</p>
+              <p>And that's what you see here! Open up the inspector and have a look.</p>
           </div>
-      </div>
-
-      <div class="box hide" data-content="3">
-          <img src="https://images.pexels.com/photos/5336951/pexels-photo-5336951.jpeg?auto=compress&cs=tinysrgb&w=800" alt="">
-          <div>
-              <h3>Lorem ipsum dolor</h3>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium itaque amet ducimus, magni
-                  iure
-                  a repudiandae molestias nemo voluptatibus voluptas earum excepturi architecto, iusto necessitatibus
-                  sequi perferendis veritatis! Voluptatem?
-              </p>
+      </details>
+      <details class="details-item">
+          <summary class="details-tab">UX patches with javascript</summary>
+          <div class="details-content">
+              <p>So you might have thought we could get by without any JS, but we need it a little. Luckily it's the type of script that you can write once and reuse without reconfiguration.</p>
+              <p>The default functionality of the details tab means that it can be toggled open or closed. That's not what we want for tabs. Each details tag must be manually closed and then another opened. We want a tab to stay open and then close when another is picked.</p>
+              <p>By watching for attribute changes and blocking keyboard and mouse input from toggling a details tab when a tab is open, we can emulate the expected tab behavior.</p>
+              <p>Then it's just a matter of toggling the sibling details tags when another is selected.</p>
           </div>
-      </div>
-
+      </details>
   </div>
+</body>
   <footer class="footer">
   	 <div class="container">
   	 	<div class="row">

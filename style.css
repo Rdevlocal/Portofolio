@@ -1,18 +1,9 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  text-decoration: none;
-  list-style: none;
-}
-
 .header {
   position: sticky;
   top: 0;
   width: 100%;
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
-  background-color: #151418;
+  background-color: #FFF0DE;
   z-index: 1;
 }
 
@@ -26,11 +17,11 @@ nav {
 .logo a {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 
 .logo a span {
-  color: #8739fa;
+  color: #ffffff;
 }
 
 .menu {
@@ -45,7 +36,7 @@ nav {
   font-size: 17px;
   font-weight: 500;
   transition: 0.2s all ease-in-out;
-  color: #fff;
+  color: #000;
 }
 
 .menu:hover a {
@@ -100,6 +91,7 @@ nav {
     cursor: pointer;
   }
 }
+
 body {
   font-family: "Poppins", sans-serif;
   color: white;
@@ -212,7 +204,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+	background-color:  #000;
     padding: 70px 0;
 }
 .footer-col{
@@ -227,16 +219,7 @@ ul{
 	font-weight: 500;
 	position: relative;
 }
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
+
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
@@ -246,7 +229,7 @@ ul{
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color: #fff;
 	display: block;
 	transition: all 0.3s ease;
 }
@@ -254,20 +237,8 @@ ul{
 	color: #ffffff;
 	padding-left: 8px;
 }
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
 .footer-col .social-links a:hover{
-	color: #24262b;
+	color:  #FFF0DE;
 	background-color: #ffffff;
 }
 
@@ -283,186 +254,3 @@ ul{
     width: 100%;
 }
 }
-/*writing*/
-
-@sign-x: 255px;
-@sign-y: 84px;
-@sign-frames: 85;
-@sign-duration: 3.5s;
-@sign-delay: .2s;
-
-#dex-sign {
-    display: inline-block;
-    margin: 30px 10px 15px 10px;
-    width: @sign-x;
-    height: @sign-y;
-    background: url(http://drygiel.com/projects/sign/frames.png) no-repeat;
-
-    &.white {
-        background-image: url(http://drygiel.com/projects/sign/frames-255-white.png);
-    }
-
-    &.play {
-        -moz-animation: sign-anim @sign-duration @sign-delay steps(@sign-frames) forwards;
-        -o-animation: sign-anim @sign-duration @sign-delay steps(@sign-frames) forwards;
-        -webkit-animation: sign-anim @sign-duration @sign-delay steps(@sign-frames) forwards;
-        animation: sign-anim @sign-duration @sign-delay steps(@sign-frames) forwards;
-    }
-}
-
-a#dex-sign {
-
-    &:hover {
-        @sign-hover-color-spin: 165deg;
-        -webkit-filter: ~'invert(30%) brightness(80%) sepia(100%) contrast(110%) saturate(953%) hue-rotate(@{sign-hover-color-spin})';
-    }
-}
-
-@-webkit-keyframes sign-anim {
-    to {
-        background-position: 0 @sign-frames * -@sign-y;
-    }
-}
-
-@-moz-keyframes sign-anim {
-    to {
-        background-position: 0 @sign-frames * -@sign-y;
-    }
-}
-
-@keyframes sign-anim {
-    to {
-        background-position: 0 @sign-frames * -@sign-y;
-    }
-}
-
-
-
-
-// _____________________________________________ LAYOUT
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    font-size: 1em;
-    color: #2C2C2C;
-    height: 100%;
-    font-family: 'Raleway', sans-serif;
-}
-
-::selection {
-    background: white;
-}
-
-::-moz-selection {
-    background: white;
-}
-
-section {
-  
-    @color1: #FFF;
-    @color2: #D6D6D6;
-
-    height: 100%;
-    min-height: 335px;
-    background-color: @color1;
-    background-image: radial-gradient(center top, circle cover, @color1, @color2);
-    background-image: -o-radial-gradient(center top, circle cover, @color1, @color2);
-    background-image: -ms-radial-gradient(center top, circle cover, @color1, @color2);
-    background-image: -moz-radial-gradient(center top, circle cover, @color1, @color2);
-    background-image: -webkit-radial-gradient(center top, circle cover, @color1, @color2);
-    text-align: center;
-
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        min-height: 335px;
-        pointer-events: none;
-        opacity: .30;
-    }
-
-    #replay {
-        position: absolute;
-        z-index: 9999;
-        bottom: -65px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: inline-block;
-        padding: 10px;
-        background: rgba(240, 240, 240, 0.44);
-        border: 1px solid #BABABA;
-        color: #696969;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: .6em;
-        -moz-transition: left 6s cubic-bezier(1,.01,1,.01);
-        -o-transition: left 6s cubic-bezier(1,.01,1,.01);
-        -webkit-transition: left 6s cubic-bezier(1,.01,1,.01);
-        transition: left 6s cubic-bezier(1,.01,1,.01);
-
-        &:hover {
-            left: -100000%;
-            -moz-transition: none;
-            -o-transition: none;
-            -webkit-transition: none;
-            transition: none;
-
-            + .play {
-                -moz-animation: none !important;
-                -o-animation: none !important;
-                -webkit-animation: none !important;
-                animation: none !important;
-            }
-        }
-    }
-
-    .quote {
-        position: absolute;
-        left: 25%;
-        right: 25%;
-        top: 20%;
-        padding: 30px 0 15px 0;
-
-        cite {
-            color: #444;
-            font-family: "Hoefler Text", Georgia, Garamond, Times, serif;
-            letter-spacing: 0.1em;
-            text-align: center;
-            line-height: 110%;
-            font-size: 1.7em;
-            font-variant: small-caps;
-
-            &:before {
-                content: '’’';
-                position: absolute;
-                left: -100px;
-                top: 100px;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                font-size: 8em;
-                text-align: left;
-                font-family: Arial;
-                letter-spacing: -16px;
-                font-style: normal;
-                font-weight: bold;
-                color: rgb(123, 154, 185);
-            }
-        }
-    
-        #dex-sign 
-        { 
-            position: absolute;
-            bottom: -125px;
-            right: 0; 
-        }    
-    }
-}
-
-
