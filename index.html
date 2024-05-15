@@ -7,20 +7,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
-<header class="header">
-  <nav>
-    <div class="logo">
-      <a href="index.html">Humayun.<span>K</span></a>
-    </div>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <ul class="menu">
+<nav>
+  <ul class="navlinks">
+      <li class="items"><a href="#">Home</a></li>
+      <li class="items"><a href="#">Services</a></li>
+      <li class="items"><a href="#">Blog</a></li>
+      <li class="items"><a href="#">About-Us</a></li>
+      <li onclick="showSidebar()"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+  </ul>
+  <ul class="sidebar">
+      <li onclick="closeSidebar()"><a href="#"><ion-icon name="close-outline"></ion-icon></a></li>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Connect</a></li>
-    </ul>
-  </nav>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About-Us</a></li>
+      <img src="https://t3.ftcdn.net/jpg/02/51/80/40/360_F_251804029_ON3oL8BkopdueiT61zXaDMOF3qfSiWNx.jpg" alt="" >
+  </ul>
+</nav>
 </header>
 <body>
   <img src="img_girl.jpg" style="max-width:100%;height:auto;">
