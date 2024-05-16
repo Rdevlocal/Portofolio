@@ -15,7 +15,24 @@
     position: relative;
     width: 100%;
     height: 100%;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    box-sh
+    .my-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    
+    .my-button:hover {
+      background-color: #3e8e41;
+    }adow: 0 3px 10px rgba(0,0,0,0.3);
   }
   
   .item {
