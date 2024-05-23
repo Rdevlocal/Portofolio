@@ -8,37 +8,63 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Portofolio</h1>
-      <a href="documenten/Portofolio Inspiratie.pdf" class="btn">Zie pdf</a>
-    </div>
-  </section>
-  <section class="about-us">
-    <div class="about">
-      <img src="https://images.pexels.com/photos/1200450/pexels-photo-1200450.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="pic">
-      <div class="text">
-        <h2>About Us</h2>
-        <h5>Front-end Developer & <span>Designer</span></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
-        <div class="data">
-        <a href="#" class="hire">Hire Me</a>
-        </div>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700,800" rel="stylesheet">
+
+<div class="hero-image" style="height: 100%;">
+  <div class="hero-text">
+    <h1 style="font-style: Georgia; color: #fff; font-size:50px;">Canada Goose</h1>
+    <p>spring styles have arrived</p>
+    <button>SHOP NOW</button>
+  </div>
+  <div class="hero-exclusions">
+    <a href="#popup1">
+      <p class="exclusions">*click here for details</p>
+    </a>
+  </div>
+
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        <br><br>
+        <h2>Promotional Information & Exclusions</h2>
+        This is a list of exclusions
+        <br><br><br>
       </div>
     </div>
-    <div class="about">
-      <div class="text">
-        <h2>About Us</h2>
-        <h5>Front-end Developer & <span>Designer</span></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
-          <div class="data">
-        <a href="#" class="hire">Hire Me</a>
-        </div>
-      </div>      
-      <img src="https://images.pexels.com/photos/1200450/pexels-photo-1200450.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="pic">
-
+  </div>
+  <!--lightbox style popup goes here-->
+</div>
+  <figure class="sr-only">
+    <img src="images/portofolio.jpg" alt=""/>
+    <figcaption>Here is the caption</figcaption>
+  </figure>  <div class="feature-block">
+    <header>
+      <h2>Feature Block Responsive Layout</h2>
+      <p class="punch">Some punchy introductory text goes here in the header.</p>
+    </header>
+    <figure><img src="http://placehold.it/450x450" /></figure>
+    <div class="body-text">
+      <p>We want the source order to be: <strong>header, image, body copy</strong>. But we'd also like a floated media-object style layout for screens with enough space to accommodate that.</p>
+      <p>Adjust min-width values in the two media queries to accomodate your own text.</p>
+  
+      <p>Lectus mid lundium, amet, quis placerat parturient mauris? Placerat quis parturient, tincidunt porta risus? Tincidunt aenean nunc augue sed sit, dictumst lectus? Diam! Et amet amet aliquet ac? Ut nec? Nunc ut sed rhoncus enim rhoncus lundium nec lundium, et porta risus nisi pellentesque? Odio mauris. Mid tincidunt magna pulvinar magna massa sit ut mauris et, dapibus porttitor? Facilisis etiam? Habitasse a, tristique, aenean amet odio lorem rhoncus.</p>
     </div>
-  </section>
+  </div>
+  
+  <div class="feature-block inverted">
+    <header>
+      <h2>Feature Block Responsive Layout - Inverted</h2>
+      <p class="punch">This also works with a right floated image!</p>
+    </header>
+    <figure><img src="images/Dev.jpg" /></figure>
+    <div class="body-text">
+      <p>We want the source order to be: <strong>header, image, body copy</strong>. But we'd also like a floated media-object style layout for screens with enough space to accommodate that.</p>
+      <p>Adjust min-width values in the two media queries to accomodate your own text.</p>
+  
+      <p>Lectus mid lundium, amet, quis placerat parturient mauris? Placerat quis parturient, tincidunt porta risus? Tincidunt aenean nunc augue sed sit, dictumst lectus? Diam! Et amet amet aliquet ac? Ut nec? Nunc ut sed rhoncus enim rhoncus lundium nec lundium, et porta risus nisi pellentesque? Odio mauris. Mid tincidunt magna pulvinar magna massa sit ut mauris et, dapibus porttitor? Facilisis etiam? Habitasse a, tristique, aenean amet odio lorem rhoncus.</p>
+    </div>
+  </div>
 </body>
 
 <footer class="footer">

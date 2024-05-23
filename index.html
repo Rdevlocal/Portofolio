@@ -9,14 +9,79 @@
 </head>
 
 <body>
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Welcome to My Website</h1>
-      <p>This is a full-screen hero banner in a section.</p>
-      <a href="#" class="btn">Learn More</a>
-    </div>
-  </section>
+<!--Responsive Hero Image with CSS Text + Button + popup Full-Width. If you like my work, please credit author: www.action360.ca @action360ca Enjoy!-->
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700,800" rel="stylesheet">
+
+<div class="hero-image" style="height: 100%;">
+  <div class="hero-text">
+    <h1 style="font-style: Georgia; color: #fff; font-size:50px;">Canada Goose</h1>
+    <p>spring styles have arrived</p>
+    <button>SHOP NOW</button>
+  </div>
+  <div class="hero-exclusions">
+    <a href="#popup1">
+      <p class="exclusions">*click here for details</p>
+    </a>
+  </div>
+
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        <br><br>
+        <h2>Promotional Information & Exclusions</h2>
+        This is a list of exclusions
+        <br><br><br>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--lightbox style popup goes here-->
+  <div class="tabs">
+    <input type="radio" name="tabs" id="tabone" checked="checked">
+    <label for="tabone">Tab One</label>
+    <div class="tab">
+      <h1>Tab One Content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    
+    <input type="radio" name="tabs" id="tabtwo">
+    <label for="tabtwo">Tab Two</label>
+    <div class="tab">
+      <h1>Tab Two Content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    
+    <input type="radio" name="tabs" id="tabthree">
+    <label for="tabthree">Tab Three</label>
+    <div class="tab">
+      <h1>Tab Three Content</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+  </div>
+  <div class="col-group">
+    <div>
+      <li class="entypo-lamp"></li>
+      <h3>Salutantibus vitae elit libero, a pharetra augue.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+    </div>
+    <div>
+      <li class="entypo-flag"></li>
+      <h3>Fictum,  deserunt mollit anim laborum astutumque!</h3>
+      <p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+    </div>
+    <div>
+      
+      <li class="entypo-trophy"></li>
+      <h3>Idque Caesaris facere voluntate liceret</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+    </div>
+  </div>
+  
     <section class="carousel">
       <div class="carousel__container">
         <div class="carousel--item">
