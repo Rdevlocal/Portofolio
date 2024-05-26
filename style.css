@@ -95,6 +95,23 @@ p {
   width: 700px;
   margin: 300px auto;
 }
+.info {
+  display: flex;
+  align-items: left;
+  width: 50%;
+
+}
+
+.text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image {
+  width: 50%;
+  max-width: 300px;
+  align-content: left;
+}
 
 .tabbed > input {
  display: none;
@@ -119,10 +136,12 @@ p {
   border-bottom: 200px;
 }
 
+
 .tabs > div {
   position: absolute;
   opacity: 0;
   transform: translateY(6px);
+
 }
 
 #tab-nav-1:checked ~ .tabs > div:nth-child(1),
