@@ -84,75 +84,16 @@ p {
 .overlay {
   position: fixed;
   top: 0;
-  bottom: 0;
+  bottom: 10;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
 }
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 2px;
-  width: 60%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Georgia, sans-serif;
-  font-style: italic;
-}
-
-.popup .close {
-  position: fixed;
-  top: 90px;
-  left: 50%;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #a6a6a6;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-  padding-top: 30px;
-}
-
-@media screen and (max-width: 700px) {
-  .box {
-    width: 70%;
-  }
-  .popup {
-    width: 70%;
-  }
-}
-
-* {
-  box-sizing: border-box;  
-}
-
-body {
-  font-family: 'Raleway', sans-serif;
-}
-
 .tabbed {
   width: 700px;
-  margin: 120px auto;
+  margin: 300px auto;
 }
 
 .tabbed > input {
@@ -164,25 +105,23 @@ body {
   float: left;
   padding: 15px 20px;
   font-size: 22px;
-  transition: background-color .4s;
 }
 
 .tabbed > label:hover,
 .tabbed > input:checked + label {
-  background: black;
-  color: white;
+  color: #000;
 }
 
 .tabs {
   clear: both;
-  position: relative;
-  border-top: 2px solid black;
+  position: bold;
+  border-top: 2px solid #000;
+  border-bottom: 200px;
 }
 
 .tabs > div {
   position: absolute;
   opacity: 0;
-  transition: opacity .5s;
   transform: translateY(6px);
 }
 
@@ -193,14 +132,7 @@ body {
   transform: translateY(0px);
   transition: all .3s linear .1s;
 }
-.panel {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 15px 25px;
-  position: relative;
-  width: 100%;
-  z-index: 10;
-}
+
 
 .pricing-table {
   box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
@@ -220,7 +152,6 @@ body {
 }
 
 .pricing-plan {
-  border-bottom: 1px solid #e1f1ff;
   padding: 25px;
 }
 
@@ -231,7 +162,6 @@ body {
 @media (min-width: 900px) {
   .pricing-plan {
     border-bottom: none;
-    border-right: 1px solid #e1f1ff;
     flex-basis: 100%;
     padding: 25px 50px;
   }
@@ -247,61 +177,17 @@ body {
 }
 
 .pricing-header {
-  color: #888;
+  color: #000;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.pricing-features {
-  color: #016FF9;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 50px 0 25px;
-}
 
-.pricing-features-item {
-  border-top: 1px solid #e1f1ff;
-  font-size: 12px;
-  line-height: 1.5;
-  padding: 15px 0;
-}
 
 .pricing-features-item:last-child {
   border-bottom: 1px solid #e1f1ff;
 }
 
-.pricing-price {
-  color: #016FF9;
-  display: block;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.pricing-button {
-  border: 1px solid #9dd1ff;
-  border-radius: 10px;
-  color: #348EFE;
-  display: inline-block;
-  margin: 25px 0;
-  padding: 15px 35px;
-  text-decoration: none;
-  transition: all 150ms ease-in-out;
-}
-
-.pricing-button:hover,
-.pricing-button:focus {
-  background-color: #e1f1ff;
-}
-
-.pricing-button.is-featured {
-  background-color: #48aaff;
-  color: #fff;
-}
-
-.pricing-button.is-featured:hover,
-.pricing-button.is-featured:active {
-  background-color: #269aff;
-}
 /*footer*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
@@ -380,7 +266,7 @@ ul{
 
 .carousel {
     padding: 30px;
-    position: relative;
+    position: center;
     overflow-x: hidden;
   }
   
@@ -393,7 +279,7 @@ ul{
   
   .carousel--item {
     display: inline-block;
-    position: centers;
+    position: center;
     margin: 10px 8px;
     width: 200px;
     height: 250px;
@@ -401,7 +287,7 @@ ul{
     overflow: hidden;
     cursor: pointer;
     transition: 350ms all;
-    transform-origin: center left;
+    transform-origin: center;
   }
   
   .carousel--item:hover ~ .carousel--item {
@@ -433,7 +319,6 @@ ul{
     right: 0;
     bottom: 0;
     font-size: 10px;
-    background: linear-gradient(83deg, rgba(244, 67, 54, 0.8) 0%, (250, 246, 246, 0.1) 100%);
     opacity: 0;
     transition: 350ms opacity;
   }
@@ -454,3 +339,4 @@ ul{
           background-position: 0% 50%;
       }
   }
+  

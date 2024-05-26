@@ -31,7 +31,7 @@ p {
 }
 
 .hero-image {
-  background-image: url("images/Designer.png");
+  background-image: url("images/uiteg.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,39 +83,6 @@ p {
   text-shadow: 2px 2px #000;
 }
 
-/*start of popup*/
-.exclusions {
-  font-family: Georgia;
-  font-size: 8pt;
-  letter-spacing: 1px;
-  text-shadow: none;
-  font-style: normal;
-}
-
-.box {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 35px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
-}
-
-/*.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: #06D85F;
-}*/
 
 .overlay {
   position: fixed;
