@@ -105,23 +105,3 @@ $('.details-tab').on("click", function(e) {
     e.preventDefault();
   }
 });
-const menuItems = document.querySelectorAll('.menu li');
-
-menuItems.forEach(item => {
-  item.addEventListener('click', e => {
-    e.preventDefault();
-    const id = item.getAttribute('id');
-    const section = document.querySelector(`#${id}`);
-    const pos = section.offsetTop;
-    window.scrollTo({ top: pos, behavior: 'smooth' });
-  });
-});
-const menuItems = document.querySelectorAll('.menu li a');
-
-menuItems.forEach(item => {
-  item.addEventListener('click', e => {
-    e.preventDefault();
-    const scrollToUrl = item.getAttribute('data-scroll-to');
-    window.location.href = scrollToUrl;
-  });
-});
