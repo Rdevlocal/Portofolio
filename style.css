@@ -5,6 +5,19 @@ html {
   width:auto;
   background-color: #FFF0DE;
 }
+#center-button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#center-button:hover {
+  background-color: #333;
+}
 
 /* 
 hero image
