@@ -13,13 +13,11 @@ h1 {
   font-weight: bold;
   font-style: italic;
   margin: 10px;
-  text-shadow: 2px 2px #000;
 }
 
 p {
   font-family: Georgia;
   font-style: italic;
-  text-shadow: 1px 1px #000;
 }
 
 .exclusions {

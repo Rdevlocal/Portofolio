@@ -13,6 +13,8 @@ html {
   background-color: #000;
   color: #fff;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 
 #center-button:hover {
@@ -93,7 +95,7 @@ select:focus {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 65px;
   overflow: hidden; }
   .tabs [class^="tab"] label,
   .tabs [class*=" tab"] label {
