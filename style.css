@@ -268,7 +268,7 @@ ul{
 	background-color: #ffffff;
 }
 
-/*responsive*/
+/*responsiveness footer*/
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
@@ -358,80 +358,4 @@ ul{
           background-position: 0% 50%;
       }
   }
-  /*personal projects*/
-  details[open] summary ~ * {
-    animation: open 0.3s ease-in-out;
-  }
   
-  @keyframes open {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  details summary::-webkit-details-marker {
-    display: none;
-  }
-  
-  details summary {
-    width: 100%;
-    padding: 0.5rem 0;
-    border-top: 1px solid black;
-    position: relative;
-    cursor: pointer;
-    font-size: 1.25rem;
-    font-weight: 300;
-    list-style: none;
-  }
-  
-  details summary:after {
-    content: "+";
-    color: black;
-    position: absolute;
-    font-size: 1.75rem;
-    line-height: 0;
-    margin-top: 0.75rem;
-    right: 0;
-    font-weight: 200;
-    transform-origin: center;
-    transition: 200ms linear;
-  }
-  details[open] summary:after {
-    transform: rotate(45deg);
-    font-size: 2rem;
-  }
-  details summary {
-    outline: 0;
-  }
-  details p {
-    font-size: 0.95rem;
-    margin: 0 0 1rem;
-    padding-top: 1rem;
-  }
-  .content {
-    width: 77%;
-    margin: 50px auto;
-    font-family: 'Merriweather', serif;
-    font-size: 17px;
-    color: #6c767a;
-    line-height: 1.9;
-  }
-  @media (min-width: 500px) {
-    .content {
-      width: 43%;
-    }
-    #button {
-      margin: 30px;
-    }
-  }
-  .content h1 {
-    margin-bottom: -10px;
-    color: #000;
-    line-height: 1.5;
-  }
-  .content h3 {
-    font-style: italic;
-    color: #000;
-  }
